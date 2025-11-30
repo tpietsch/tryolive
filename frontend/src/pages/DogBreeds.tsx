@@ -116,6 +116,9 @@ export default function DogBreeds() {
                 </div>
                 <span className="text-gray-500"> entries </span>
               </div>
+              <p className="text-xs text-gray-500 mt-2 sm:mt-0">
+                Note: We need to page through the results per page to have an accurate entries per page count.
+              </p>
             </div>
 
             <div className="max-w-full overflow-x-auto custom-scrollbar">

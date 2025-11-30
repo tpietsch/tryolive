@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useMemo } from "react";
 import {
   Table,
@@ -171,7 +169,6 @@ export default function DataTableOne() {
   }, [sortKey, sortOrder, searchTerm]);
 
   const totalItems = filteredAndSortedData.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -377,7 +374,6 @@ export default function DataTableOne() {
             </p>
           </div>
           <PaginationWithIcon
-            totalPages={totalPages}
             initialPage={currentPage}
             onPageChange={handlePageChange}
           />

@@ -62,4 +62,5 @@ export interface APIError {
 export interface BreedsQueryParams {
   page?: number;
   page_size?: number;
+  accurate_entries?: boolean;
 }

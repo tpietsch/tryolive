@@ -20,6 +20,7 @@ class BreedService {
         params: {
           page: params?.page || 1,
           page_size: params?.page_size || 10,
+          accurate_entries: params?.accurate_entries,
         },
       }
     );
