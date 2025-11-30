@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    container_name: app-all
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  redis:
+    image: redis:alpine
+    container_name: app-redis-full
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    networks:
+      - app-network
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  redis-data:
