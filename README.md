@@ -3,6 +3,7 @@
 docker-compose -f docker-compose-full.yaml or just docker build and run manually 
 
 http://localhost/dog-breeds
+http://localhost/api/docs
 
 The additional docker file I use for local dev because 
 I like to run the FE/BE process separately for hot reloading and debugging tooling
